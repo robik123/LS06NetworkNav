@@ -42,7 +42,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerView = view.findViewById(R.id.recyclerview)
+        recyclerView = (_binding!!).recyclerview
         recyclerAdapter = RecyclerAdapter(requireContext(), Navigation.findNavController(view))
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = recyclerAdapter
